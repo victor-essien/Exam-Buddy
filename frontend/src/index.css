@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Lexend:wght@400;500;600;700&family=Poppins&display=swap");
+
+:root {
+  --primary: #dd0046;
+  --text: #000000;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  overflow: scroll;
+}
+
+.logo-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.side-cont {
+ 
+  width: 60%;
+  background: #fff;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
+  position: fixed;
+  border-radius: 0px 16px 16px 0px;
+  padding: 60px 0px 0px 24px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+
+.open {
+  display: none;
+  
+}
+.close {
+  display: block;
+
+}
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+}
+a {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.nav-list li {
+  display: flex;
+  padding: 15px 4px 14px 0px;
+}
+.nav-list span {
+  width: 20px;
+  height: 20px;
+}
+.nav-list li a {
+  margin-left: 14px;
+  margin-top: 4px;
+}
+#login a {
+  color: #dd0046;
+}
+#login span {
+  color: #dd0046;
+}
+.nav-list li a .active {
+  color: #dd0046;
+}
+.background{
+  background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 /0.8));
+}
+.container{
+ 
+  max-width: 1110px;
+  padding-top: 4rem;
+  padding-left: 2rem;
+}
+.container p{
+  font-size: 16px;
+  font-weight:500;
+  
+}
+.even-columns{
+  display: grid;
+  
+}
+.btn-home{
+  margin-top: 16px;
+ color: #fdfdfd;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #dd0046;
+  border: none;
+  padding: 20px 50px ;
+  border-radius: 90px;
+}
+/* Desktop sizing */
+@media (min-width: 60em) {
+ 
+ .home-text{
+  font-size: 44px;
+ }
+  .container{
+   margin-left: 27%;
+   
+  }
+ .nav-cont{
+  position: absolute;
+ }
+  .even-columns{
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  .user-welcome {
+    display: none;
+  }
+  
+  .side-cont {
+    top: 84px;
+    
+    width: 270px;
+    background-color: #dd0046;
+    background-image: url("./images/nav-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    
+  }
+  .nav-list span {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+  }
+ #login a{
+  color: #fff;
+  
+}
+#login span{
+  color: #fff;
+}
+
+.nav-list a {
+    color: #fdfdfd;
+    font-size: 500;
+  }
+ 
+}
