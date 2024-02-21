@@ -3,9 +3,11 @@ const dotenv = require("dotenv");
 dotenv.config();
 const   PORT   = process.env.PORT;
 const quizRoutes = require("./routes/quizRoutes");
+const cors = require('cors')
 //express app
 const app = express();
 app.use(express.json())
+app.use(cors())
 const connectDB = require('./db/connect')
 app.use((req, res, next) => {
   console.log(req.path, req.method);

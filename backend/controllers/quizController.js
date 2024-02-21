@@ -14,20 +14,24 @@ const getQuiz = async(req, res) => {
         res.status(500).json({error: 'Internal Server Error'})
     }
 }
-
-
-const getCategory = async(req, res) => {
+const getCategory = async (req, res) => {
+     console.log(Category)
     try {
-        const categoryResult = await Category.find()
-        res.json({categoryResult})
-    }
-    catch(error) {
+        const category = await Category.find()
+        res.json({category:category})
+    }catch (error) {
         console.log(error)
         res.status(500).json({error: 'Internal Server Error'})
     }
-}
+    }
+
+
+
+
+   
 
 module.exports = {
     getQuiz,
     getCategory
+  
 }
