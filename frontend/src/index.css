@@ -24,6 +24,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+ 
+}
+.nav-cont{
+position: fixed;
+width: 100%;
+background-color: white;
 }
 .side-cont {
   width: 60%;
@@ -59,7 +65,9 @@ a {
   text-decoration: none;
 }
 
+
 .nav-list li {
+  cursor: pointer;
   display: flex;
   padding: 15px 4px 14px 0px;
 }
@@ -85,8 +93,10 @@ a {
 }
 .container {
   max-width: 1110px;
-  padding-top: 4rem;
+  padding-top: 4.6rem;
   padding-left: 2rem;
+  
+  
 }
 .container p {
   font-size: 16px;
@@ -108,9 +118,9 @@ a {
 
 .loading-spinner-container {
   display: flex;
-  position: absolute;
-  top: 31%;
-  left: 34%;
+  position: relative;
+  top: 3%;
+  left:30%;
   width: 30%;
   justify-content: center;
   align-items: center;
@@ -118,7 +128,7 @@ a {
 
 .loading-spinner {
   border: 8px solid #f3f3f3;
-  border-top: 8px solid #3498db;
+  border-top: 8px solid #dd0046;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -169,8 +179,6 @@ li {
   font-size: 17px;
 }
 
-.question-no {
-}
 
 #quiz-li.correct {
   background-color: rgb(53, 212, 53);
@@ -263,16 +271,179 @@ li {
   font-size: 18px;
   cursor: pointer;
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+
+  z-index: 999; /* Ensure it appears above other content */
+}
+/* .popup{
+  
+  
+  box-shadow: 0 0 10px black ;
+  box-sizing: border-box;
+ 
+ padding-top: 20px;
+  margin-left: 23px;
+  width: 40%;
+  height: 40%;
+  top: 0;
+  position: absolute;
+  z-index: 1000;
+} */
+.popup {
+  border-radius: 5px;
+  position: absolute;
+  top: 29%;
+  box-sizing: border-box;
+  height: 55%;
+  width: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  z-index: 1000; /* Ensure the popup appears on top of the overlay */
+}
+.file-name-input{
+ 
+  width: 80%;
+  
+  font-size: 16px;
+  color: #222;
+  line-height: 1.3;
+  padding: 13px;
+  border-radius: 22px;
+
+  border: 1px solid black;
+  margin-bottom: 26px;
+  
+}
+
+.file-input{
+width: 80%;
+  font-size: 16px;
+  padding:0.6em 1.4em 0.5em 0.8em;
+  margin-bottom: 26px;
+
+}
+.add-new{
+  margin-top: 23px;
+  color: #fdfdfd;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: rgb(116, 116, 136);
+  border: none;
+  padding: 18px 20px;
+  border-radius: 13px;
+  cursor: pointer;
+}
+.file-header{
+  padding: 17px;
+  background-color:#222;
+  color: white;
+  width: 80%;
+  border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  margin-top: 14px;
+  margin-bottom: 17px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.add-file{
+ 
+  margin-top: 13px;
+  color: #fdfdfd;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #dd0046;
+  border: none;
+  padding: 18px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.popopen{
+  display: block;
+}
+.popclose{
+  display: none;
+}
+/* .files{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 6px;
+} */
+.file{
+  
+  color: white;
+  font-size: 13px;
+  
+             border-radius: 50px;
+background: #dd0046;
+box-shadow: inset 20px 20px 60px #bc003c,
+            inset -20px -20px 60px #fe0051;
+  border-radius: 12px;
+  padding: 12px;
+  width: 180px;
+  height: 60px;
+ margin-top: 4px;
+ text-overflow: ellipsis;
+}
+
+
+.file-sub-cont{
+display: flex;
+justify-content: flex-end;
+align-items: center;
+bottom: 16px;
+
+
+}
+.download-btn{
+  border: none;
+  color: black;
+  background-color: #fff;
+  border-radius: 30%;
+  font-size: 10px;
+  cursor: pointer;
+}
+.file-cat {
+  cursor: pointer;
+  border-radius: 22px;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 1em 0.8em;
+  width: 90%;
+  font-size: 16px;
+  border: solid #000000 2px;
+  margin-bottom: 24px;
+}
 /* Desktop sizing */
 @media (min-width: 60em) {
+  .popup{
+    height: 50%;
+    top: 26%;
+  width: 45%;
+  left: 50%;
+  }
+
   .home-text {
     font-size: 44px;
   }
   .container {
+   max-width: 1110px;
+    
+      padding-left: 2rem;
     margin-left: 27%;
   }
   .nav-cont {
-    position: absolute;
+    position: fixed;
   }
   .even-columns {
     grid-auto-flow: column;
@@ -298,7 +469,8 @@ li {
 
   .loading-spinner-container {
     top: 21%;
-    left: 46%;
+    left: 24%;
+    
   }
   .nav-list span {
     width: 20px;

@@ -1,10 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import HomeIcon from "../images/home-icon.svg";
-import BookIcon from "../images/book-icon.svg";
-import SlideIcon from "../images/slide-icon.svg";
-import QuizIcon from "../images/quiz-icon.svg";
-import LoginIcon from "../images/login-icon.svg";
+
 
 const Sidebar = ({ open }) => {
   return (
@@ -15,25 +11,25 @@ const Sidebar = ({ open }) => {
         </div>
         <nav>
           <ul className="nav-list">
-            <li className="active ">
+            <li className="active nav-link">
             <span class="material-symbols-outlined">
               home
             </span>
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className="nav-link">
             <span class="material-symbols-outlined">library_books</span>
               <Link to="/course-slides">Course Slides</Link>
-            </li>
-            <li>
+            </li >
+            <li className="nav-link">
             <span class="material-symbols-outlined">book</span>
               <Link to="/textbooks">Texbooks</Link>
             </li>
-            <li>
+            <li className="nav-link">
             <span class="material-symbols-outlined">quiz</span>
               <Link to="/quiz">Quiz</Link>
-            </li>
-            <li id="login">
+            </li >
+            <li id="login" className="nav-link">
             <span class="material-symbols-outlined">login</span>
               <Link to="/login">Login</Link>
             </li>
